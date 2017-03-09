@@ -98,7 +98,7 @@ static bool isPrime(uint64_t number) noexcept
 
 int main(int count, char *arguments[])
 {
-        for (uint64_t i = std::sqrt(600851475143); i > 1; --i) {
+        for (uint64_t i = static_cast<uint64_t>(std::sqrt(600851475143)); i > 1; --i) {
                 if (600851475143 % i == 0 && isPrime(i) == true) {
                         std::cout << i << '\n';
                         return 0;
