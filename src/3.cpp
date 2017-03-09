@@ -28,8 +28,12 @@ static bool isWitness(uint64_t number, uint64_t exponent, uint64_t coefficient, 
 {
         uint64_t i = exponentiate(candidate, coefficient, number);
 
+        if (i == 1) {
+                return false;
+        }
+
         for (; exponent != 0; --exponent) {
-                if (i == 1 || i == number - 1) {
+                if (i == number - 1) {
                         return false;
                 }
 
