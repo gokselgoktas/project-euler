@@ -29,21 +29,15 @@ bool isPermutation(std::bitset<size> const &first, std::bitset<size> const &seco
         return true;
 }
 
-bool isPermutation(unsigned first, unsigned second) noexcept
-{
-        std::bitset<10> i = split(first);
-        std::bitset<10> k = split(second);
-
-        return isPermutation(i, k);
-}
-
 int main(int count, char *arguments[])
 {
         for (unsigned i = 1; i < std::numeric_limits<unsigned>::max(); ++i) {
-                unsigned k = 2;
+                std::bitset<10> r = split(i);
 
+                unsigned k = 2;
                 for (; k < 7; ++k) {
-                        if (isPermutation(i, i * k) == false) {
+                        std::bitset<10> l = split(i * k);
+                        if (isPermutation(r, l) == false) {
                                 break;
                         }
                 }
