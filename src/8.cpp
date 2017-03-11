@@ -49,8 +49,6 @@ int main(int count, char *arguments[])
 
         uint64_t maximum = 126;
 
-        auto i = series.cbegin();
-
         for (auto i = series.cbegin(); i != series.cend() - 13; ++i) {
                 uint64_t product = 1;
 
