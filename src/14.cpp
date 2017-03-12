@@ -20,14 +20,14 @@ static constexpr unsigned getSequenceLength(unsigned number) noexcept
 int main(int count, char *arguments[])
 {
         unsigned number = 999999;
-        unsigned maximum = 0;
+        unsigned sequenceLength = 0;
 
         for (unsigned i = 999999; i > 0; --i) {
                 unsigned length = getSequenceLength(i);
 
-                if (length > maximum) {
-                        maximum = length;
+                if (length > sequenceLength) {
                         number = i;
+                        sequenceLength = length;
                 }
         }
 
