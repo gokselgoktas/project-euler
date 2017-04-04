@@ -1,8 +1,5 @@
 #include <iostream>
 
-#include <cstdint>
-#include <cmath>
-
 #include <array>
 #include <string>
 
