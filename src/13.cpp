@@ -3,7 +3,7 @@
 #include <array>
 #include <string>
 
-void add(std::string &result, std::string const &number)
+static void add(std::string &result, std::string const &number)
 {
         unsigned accumulator = 0;
 
@@ -24,7 +24,8 @@ void add(std::string &result, std::string const &number)
 
                         ++i;
                 } else {
-                        result.insert(0, 1, static_cast<char>(accumulator) + '0');
+                        result.insert(0, 1,
+                                static_cast<char>(accumulator) + '0');
                 }
 
                 accumulator /= 10;
@@ -135,7 +136,8 @@ int main(int count, char *arguments[])
                 "53503534226472524250874054075591789781264330331690"
         } };
 
-        std::string result = "37107287533902102798797998220837590246510135740250";
+        std::string result =
+                "37107287533902102798797998220837590246510135740250";
 
         for (auto number : numbers) {
                 add(result, number);

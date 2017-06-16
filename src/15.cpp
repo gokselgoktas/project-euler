@@ -2,8 +2,9 @@
 
 int main(int count, char *arguments[])
 {
-        /* The number of paths through a lattice from the origin to { a, b } is given by Hilton-Pedersen:
-         * (a + b) | a = (a + b)! / (((a + b) - a)! * a!) = (a + b)! / (b! * a!)
+        /* The number of paths through a lattice from the origin to { a, b } is
+         * given by Hilton-Pedersen:
+         * (a + b) | a = (a + b)! / ((a + b) - a)! * a! = (a + b)! / b! * a!
          *
          * The number of paths in a 2 * 2 grid:
          * (2 + 2) | 2 = 4! / (2! * 2!) = 6

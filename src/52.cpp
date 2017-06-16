@@ -18,7 +18,8 @@ std::bitset<10> split(unsigned number) noexcept
 }
 
 template <size_t size>
-bool isPermutation(std::bitset<size> const &first, std::bitset<size> const &second) noexcept
+bool isPermutation(std::bitset<size> const &first,
+        std::bitset<size> const &second) noexcept
 {
         for (size_t i = 0; i < second.size(); ++i) {
                 if (first[i] != second[i]) {

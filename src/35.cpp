@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <cmath>
 
-uint64_t rotate(uint64_t number, size_t length)
+static uint64_t rotate(uint64_t number, size_t length) noexcept
 {
         constexpr uint64_t lookup[] = {
                 1, 10, 100, 1000, 10000, 100000
