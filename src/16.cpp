@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void add(std::string &result, std::string const &number)
+static void add(std::string &result, std::string const &number)
 {
         unsigned accumulator = 0;
 
@@ -22,7 +22,8 @@ void add(std::string &result, std::string const &number)
 
                         ++i;
                 } else {
-                        result.insert(0, 1, static_cast<char>(accumulator) + '0');
+                        result.insert(0, 1,
+                                static_cast<char>(accumulator) + '0');
                 }
 
                 accumulator /= 10;

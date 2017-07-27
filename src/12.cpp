@@ -11,8 +11,9 @@ static constexpr unsigned getTriangleNumber(unsigned i) noexcept
 static unsigned getDivisorCount(unsigned number) noexcept
 {
         unsigned count = 0;
+        unsigned root = static_cast<unsigned>(std::sqrt(number));
 
-        for (unsigned i = 1; i < static_cast<unsigned>(std::sqrt(number)); ++i) {
+        for (unsigned i = 1; i < root; ++i) {
                 if (number % i == 0) {
                         count += 2;
                 }
